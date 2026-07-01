@@ -1,0 +1,16 @@
+<view class="card shadow" bindtap="onTap" wx:if="{{design}}">
+  <view class="thumb" style="background: {{gradient}};">
+    <view class="swatches">
+      <view
+        wx:for="{{design.palette}}"
+        wx:key="*this"
+        class="swatch"
+        style="background: {{item}};"
+      ></view>
+    </view>
+  </view>
+  <view class="meta">
+    <view class="title">{{design.title}}</view>
+    <view class="sub muted">{{design.author}} · {{design.category}}</view>
+  </view>
+</view>

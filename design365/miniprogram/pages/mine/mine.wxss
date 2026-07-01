@@ -1,0 +1,63 @@
+.stats {
+  background: var(--card);
+  border-radius: 28rpx;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0;
+  margin-bottom: 12rpx;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+}
+
+.num {
+  font-size: 56rpx;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.label {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+
+.divider {
+  width: 2rpx;
+  height: 60rpx;
+  background: #ececf2;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24rpx;
+}
+
+.grid-item {
+  width: calc((100% - 24rpx) / 2);
+}
+
+.empty {
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.empty-emoji {
+  font-size: 96rpx;
+  margin-bottom: 16rpx;
+}
+
+.btn-ghost {
+  margin-top: 32rpx;
+  display: inline-block;
+  background: #fff;
+  color: var(--brand);
+  border: 2rpx solid rgba(108, 92, 231, 0.3);
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}

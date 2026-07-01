@@ -1,0 +1,80 @@
+.canvas {
+  height: 460rpx;
+}
+
+.sheet {
+  margin-top: -48rpx;
+  background: var(--bg);
+  border-radius: 40rpx 40rpx 0 0;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 44rpx;
+  font-weight: 800;
+}
+
+.fav {
+  font-size: 48rpx;
+  color: var(--muted);
+  padding: 0 8rpx;
+}
+
+.fav.is-on {
+  color: #ffb703;
+}
+
+.desc {
+  margin: 24rpx 0 8rpx;
+  color: var(--ink-2);
+  font-size: 28rpx;
+}
+
+.palette-list {
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.palette-row {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 24rpx;
+  border-bottom: 1rpx solid #f0f0f4;
+}
+
+.palette-row:last-child {
+  border-bottom: none;
+}
+
+.dot {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.12);
+}
+
+.hex {
+  flex: 1;
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 28rpx;
+  text-transform: uppercase;
+}
+
+.copy {
+  font-size: 24rpx;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  padding-bottom: 40rpx;
+}

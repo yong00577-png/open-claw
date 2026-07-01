@@ -1,0 +1,37 @@
+<view wx:if="{{design}}">
+  <view class="canvas" style="background: {{gradient}};"></view>
+
+  <view class="container sheet">
+    <view class="row">
+      <view>
+        <view class="title">{{design.title}}</view>
+        <view class="muted">by {{design.author}} · {{design.category}}</view>
+      </view>
+      <view class="fav {{favorited ? 'is-on' : ''}}" bindtap="onToggleFav">
+        {{favorited ? '★' : '☆'}}
+      </view>
+    </view>
+
+    <view class="desc">{{design.desc}}</view>
+
+    <view class="section-title">配色 · 点击复制</view>
+    <view class="palette-list">
+      <view
+        wx:for="{{design.palette}}"
+        wx:key="*this"
+        class="palette-row"
+        data-color="{{item}}"
+        bindtap="copyColor"
+      >
+        <view class="dot" style="background: {{item}};"></view>
+        <text class="hex">{{item}}</text>
+        <text class="copy muted">复制</text>
+      </view>
+    </view>
+
+    <view class="section-title">标签</view>
+    <view class="tags">
+      <text wx:for="{{design.tags}}" wx:key="*this" class="tag">{{item}}</text>
+    </view>
+  </view>
+</view>

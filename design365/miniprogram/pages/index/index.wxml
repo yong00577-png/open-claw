@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="header">
+    <view class="brand">design<text class="brand-accent">365</text></view>
+    <view class="muted">每天一个设计灵感</view>
+  </view>
+
+  <view class="hero shadow" wx:if="{{design}}" bindtap="goDetail">
+    <view class="hero-canvas" style="background: {{gradient}};">
+      <view class="day-badge">Day {{day}} / 365</view>
+      <view class="palette">
+        <view
+          wx:for="{{design.palette}}"
+          wx:key="*this"
+          class="palette-chip"
+          style="background: {{item}};"
+        ></view>
+      </view>
+    </view>
+    <view class="hero-body">
+      <view class="hero-title">{{design.title}}</view>
+      <view class="hero-meta muted">by {{design.author}} · {{design.category}}</view>
+      <view class="hero-desc">{{design.desc}}</view>
+      <view class="tags">
+        <text wx:for="{{design.tags}}" wx:key="*this" class="tag">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-fav {{favorited ? 'is-on' : ''}}" catchtap="onToggleFav">
+      {{favorited ? '★ 已收藏' : '☆ 收藏'}}
+    </button>
+    <button class="btn btn-ghost" catchtap="goGallery">浏览设计集 →</button>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="stats shadow">
+    <view class="stat">
+      <view class="num">{{day}}</view>
+      <view class="label muted">已坚持天数</view>
+    </view>
+    <view class="divider"></view>
+    <view class="stat">
+      <view class="num">{{favorites.length}}</view>
+      <view class="label muted">收藏设计</view>
+    </view>
+  </view>
+
+  <view class="section-title">我的收藏</view>
+
+  <view class="grid" wx:if="{{favorites.length > 0}}">
+    <view class="grid-item" wx:for="{{favorites}}" wx:key="id">
+      <design-card design="{{item}}" bind:select="onSelectDesign" />
+    </view>
+  </view>
+
+  <view class="empty" wx:else>
+    <view class="empty-emoji">🎨</view>
+    <view class="muted">还没有收藏，去设计集逛逛吧</view>
+    <button class="btn-ghost" bindtap="goGallery">浏览设计集 →</button>
+  </view>
+</view>

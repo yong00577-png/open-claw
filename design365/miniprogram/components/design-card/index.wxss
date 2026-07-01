@@ -1,0 +1,40 @@
+.card {
+  background: var(--card, #fff);
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+
+.thumb {
+  height: 220rpx;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.swatches {
+  display: flex;
+  gap: 8rpx;
+  padding: 16rpx;
+}
+
+.swatch {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.15);
+}
+
+.meta {
+  padding: 18rpx 20rpx 22rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: var(--ink, #1a1a2e);
+}
+
+.sub {
+  font-size: 22rpx;
+  margin-top: 4rpx;
+}

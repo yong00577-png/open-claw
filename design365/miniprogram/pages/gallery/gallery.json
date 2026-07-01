@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设计集",
+  "usingComponents": {
+    "design-card": "/components/design-card/index"
+  }
+}

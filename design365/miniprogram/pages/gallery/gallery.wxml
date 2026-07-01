@@ -1,0 +1,19 @@
+<view class="container">
+  <scroll-view class="filters" scroll-x enable-flex>
+    <view
+      wx:for="{{categories}}"
+      wx:key="*this"
+      class="chip {{active === item ? 'is-active' : ''}}"
+      data-cat="{{item}}"
+      bindtap="onSelectCategory"
+    >{{item}}</view>
+  </scroll-view>
+
+  <view class="grid">
+    <view class="grid-item" wx:for="{{designs}}" wx:key="id">
+      <design-card design="{{item}}" bind:select="onSelectDesign" />
+    </view>
+  </view>
+
+  <view class="empty muted" wx:if="{{designs.length === 0}}">该分类下暂无设计</view>
+</view>

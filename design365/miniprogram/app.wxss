@@ -1,0 +1,50 @@
+/* app.wxss —— 全局样式与设计变量 */
+page {
+  --brand: #6c5ce7;
+  --brand-2: #a29bfe;
+  --ink: #1a1a2e;
+  --ink-2: #4a4a6a;
+  --muted: #9a9aa8;
+  --bg: #f4f4f8;
+  --card: #ffffff;
+
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 8rpx 0 24rpx;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.tag {
+  display: inline-block;
+  padding: 4rpx 18rpx;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+  background: rgba(108, 92, 231, 0.12);
+  color: var(--brand);
+}
+
+/* 通用卡片阴影 */
+.shadow {
+  box-shadow: 0 12rpx 40rpx rgba(26, 26, 46, 0.08);
+}
+
+button::after {
+  border: none;
+}
